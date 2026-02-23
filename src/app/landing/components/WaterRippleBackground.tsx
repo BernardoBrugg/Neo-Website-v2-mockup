@@ -31,16 +31,23 @@ export function WaterRippleBackground({ imageUrl }: { imageUrl: string }) {
         await import("jquery.ripples");
         
         if (rippleNode && $ && $.fn?.ripples) {
-          $(rippleNode).ripples({
-            resolution: 512,
-            dropRadius: 20,
-            perturbance: 0.04,
-            interactive: true,
-            crossOrigin: ""
-          });
+          setTimeout(() => {
+            if (!$) return;
+            try {
+              $(rippleNode).ripples({
+                resolution: 256,
+                dropRadius: 20,
+                perturbance: 0.04,
+                interactive: true,
+                crossOrigin: ""
+              });
+            } catch (err) {
+              console.error("Failed to dynamically bind ripples:", err);
+            }
+          }, 200);
         }
       } catch (err) {
-        console.error("Failed to initialize ripples:", err);
+        console.error("Failed to initialize ripples script:", err);
       }
     };
 
