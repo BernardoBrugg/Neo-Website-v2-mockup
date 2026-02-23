@@ -38,8 +38,8 @@ export function AboutSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col gap-6 pointer-events-auto"
         >
-          <h2 className="font-extrabold text-[clamp(2.5rem,5vw,4.5rem)] leading-tight"> Nossa <span className="text-neo-orange">História</span></h2>
-          <p className="max-w-4xl text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-zinc-600 dark:text-zinc-300 md:leading-10">
+          <h2 className="font-extrabold text-[clamp(2.5rem,5vw,4.5rem)] leading-tight text-black dark:text-white"> Nossa <span className="text-neo-orange">História</span></h2>
+          <p className="max-w-4xl text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-zinc-900 dark:text-zinc-300 md:leading-10 font-medium">
             Nossa equipe teve origem em 1980, com a criação do PET Metrologia e Automação, o terceiro programa de educação tutorial do Brasil. Em 2000, o programa começou a desenvolver projetos em parceria com a Fundação CERTI, além de WEG e Embraco, duas das maiores indústrias do país.
             Essas parcerias consolidaram um novo modelo: o PET Empresarial, que cinco anos depois se tornou o NEO Empresarial.
           </p>
@@ -54,8 +54,8 @@ export function AboutSection() {
             className="glass flex flex-col gap-4 rounded-[2rem] p-6 transition-all hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(255,107,0,0.15)] sm:p-8 lg:p-10 pointer-events-auto"
           >
             <Target className="h-10 w-10 text-neo-orange sm:h-12 sm:w-12" />
-            <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">Missão</h3>
-            <p className="text-[clamp(0.875rem,2vw,1.125rem)] text-zinc-600 dark:text-zinc-300 md:leading-relaxed">
+            <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-black dark:text-white">Missão</h3>
+            <p className="text-[clamp(0.875rem,2vw,1.125rem)] text-zinc-900 dark:text-zinc-300 md:leading-relaxed font-medium">
                Contribuir para a formação de engenheiros de destacada competência, por meio da realização de projetos técnicos e de atividades de gestão e desenvolvimento pessoal, em parceria com empresas.
             </p>
           </motion.div>
@@ -68,8 +68,8 @@ export function AboutSection() {
             className="glass flex flex-col gap-4 rounded-[2rem] p-6 transition-all hover:-translate-y-3 hover:shadow-[0_20px_40px_-15px_rgba(255,107,0,0.15)] sm:p-8 lg:p-10 pointer-events-auto"
           >
             <Eye className="h-10 w-10 text-neo-orange sm:h-12 sm:w-12" />
-            <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">Visão</h3>
-            <p className="text-[clamp(0.875rem,2vw,1.125rem)] text-zinc-600 dark:text-zinc-300 md:leading-relaxed">
+            <h3 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-black dark:text-white">Visão</h3>
+            <p className="text-[clamp(0.875rem,2vw,1.125rem)] text-zinc-900 dark:text-zinc-300 md:leading-relaxed font-medium">
                O NEO Empresarial será referência no desenvolvimento de engenheiros gestores, éticos e geradores de soluções inteligentes, que busquem contribuir para a melhoria da sociedade.
             </p>
           </motion.div>
@@ -81,7 +81,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="font-extrabold text-[clamp(2.5rem,5vw,4.5rem)] leading-tight"
+            className="font-extrabold text-[clamp(2.5rem,5vw,4.5rem)] leading-tight text-black dark:text-white"
           >
             Nossos <span className="text-neo-orange">Valores</span>
           </motion.h2>
@@ -99,7 +99,7 @@ export function AboutSection() {
                 className="glass flex items-center gap-2 rounded-full px-5 py-3 transition-colors hover:bg-black/5 dark:hover:bg-white/10 sm:gap-3 sm:px-6 sm:py-4 cursor-default"
               >
                 <v.icon className="h-5 w-5 text-neo-orange sm:h-6 sm:w-6" />
-                <span className="text-sm font-semibold sm:text-base">{v.title}</span>
+                <span className="text-sm font-semibold sm:text-base text-black dark:text-white">{v.title}</span>
               </motion.div>
             ))}
           </motion.div>

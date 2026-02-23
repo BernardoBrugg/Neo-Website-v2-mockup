@@ -31,11 +31,11 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.2 }}
             className="flex flex-col items-start text-left pointer-events-auto"
           >
-            <h1 className="font-extrabold tracking-tight text-[clamp(3.5rem,8vw,6rem)] leading-[1.1]">
+            <h1 className="font-extrabold tracking-tight text-[clamp(3.5rem,8vw,6rem)] leading-[1.1] text-black dark:text-white">
               Mentes Brilhantes <br />
-              <span className="text-neo-orange">Crescem Juntas</span>
+              <span className="text-neo-orange drop-shadow-sm">Crescem Juntas</span>
             </h1>
-            <p className="mt-6 max-w-xl text-zinc-600 dark:text-zinc-300 text-[clamp(1.125rem,2.5vw,1.25rem)] leading-relaxed">
+            <p className="mt-6 max-w-xl text-zinc-900 dark:text-zinc-300 text-[clamp(1.125rem,2.5vw,1.25rem)] leading-relaxed font-medium">
               Descubra a nova era da inovação tecnológica. Nós transformamos ideias em realidade através de excelência e colaboração.
             </p>
           </motion.div>
