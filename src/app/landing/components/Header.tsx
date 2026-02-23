@@ -8,7 +8,8 @@ import Link from "next/link";
 
 export function Header() {
   const { scrollY } = useScroll();
-  const headerY = useTransform(scrollY, [0, 200], ["-100%", "0%"]);
+  const headerY = useTransform(scrollY, [0, 200], ["-150%", "0%"]);
+  const headerOpacity = useTransform(scrollY, [0, 200], [0, 1]);
   
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -24,8 +25,8 @@ export function Header() {
 
   return (
     <motion.header
-      style={{ y: headerY }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-40 flex items-center justify-between gap-8 px-6 py-3 glass rounded-full shadow-lg border border-white/10"
+      style={{ y: headerY, opacity: headerOpacity }}
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-40 flex items-center justify-between gap-8 px-6 py-3 glass bg-white/40 dark:bg-transparent rounded-full shadow-lg border border-black/10 dark:border-white/10"
     >
       <Link href="/landing" className="flex items-center">
         {mounted && (
@@ -39,14 +40,14 @@ export function Header() {
         )}
       </Link>
       
-      <nav className="hidden sm:flex items-center gap-6 text-sm font-medium">
-        <Link href="/projetos" className="text-zinc-600 hover:text-neo-orange dark:text-zinc-300 dark:hover:text-neo-orange transition-colors">
+      <nav className="hidden sm:flex items-center gap-6 text-sm font-bold">
+        <Link href="/projetos" className="text-zinc-900 hover:text-neo-orange dark:text-zinc-100 dark:hover:text-neo-orange transition-colors">
           Projetos
         </Link>
-        <Link href="/sobre" className="text-zinc-600 hover:text-neo-orange dark:text-zinc-300 dark:hover:text-neo-orange transition-colors">
+        <Link href="/sobre" className="text-zinc-900 hover:text-neo-orange dark:text-zinc-100 dark:hover:text-neo-orange transition-colors">
           Sobre
         </Link>
-        <Link href="/contato" className="text-zinc-600 hover:text-neo-orange dark:text-zinc-300 dark:hover:text-neo-orange transition-colors">
+        <Link href="/contato" className="text-zinc-900 hover:text-neo-orange dark:text-zinc-100 dark:hover:text-neo-orange transition-colors">
           Contato
         </Link>
       </nav>
